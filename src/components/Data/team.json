@@ -1,6 +1,5 @@
 {
-    "team":
-    [
+    "team": [
         {
             "title": "CEO and Founder",
             "name": "John Smith",
@@ -22,10 +21,8 @@
             "profile": "/team/c3.png",
             "link": "/"
         }
-
     ],
-    "process":
-    [
+    "process": [
         {
             "id": "01",
             "hid": "accordion-open-heading-1",
