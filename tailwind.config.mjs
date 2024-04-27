@@ -14,8 +14,8 @@ export default {
 			gray: "#0D0C22",
 			stone: "#231F20",
 			lime: "#B9FF66",
-			primary: "#9288FF",
-			second: "#D4D0FF",
+			primary: "#B9B4FD",
+			secondary: "#9288FF",
 			zinc: {
 				100: "#F3F3F3",
 				200: "#F0F0F0",

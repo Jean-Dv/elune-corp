@@ -1,22 +1,26 @@
 ---
 import Container from "./Container.astro"
 import servicesData from "./Data/services.json"
+import Arrow from "./icons/Arrow.astro"
 ---
 
 <Container>
     <div class="relative flex flex-col items-center md:flex-row" id="services">
-        <div class="row items-center py-5 md:pr-20 md:w-3/12 md:py-10">
-            <div class="text-center md:text-left space-y-3 bg-lime">
-                <h2 class="text-4xl font-medium leading-none sm:text-6xl">
-                    Services
+        <div class="row items-center py-5 md:pr-20 md:w-auto md:py-10">
+            <div class="text-center md:text-left space-y-3 bg-primary md">
+                <h2
+                    class="text-4xl font-medium leading-none sm:text-6xl md:text-5xl"
+                >
+                    Servicios
                 </h2>
             </div>
         </div>
         <div class="flex items-center py-5 md:w-9/12 md:py-10">
             <p class="text-xl font-normal leading-7 text-center md:text-left">
-                Our digital marketing agency helps businesses grow and succeed
-                online through a range of services including SEO, PPC, social
-                media marketing, and content creation.
+                En Elune, nos especializamos en ofrecer soluciones integrales
+                para tu presencia en línea. Desde la creación de sitios web
+                optimizados y atractivos hasta la implementación de estrategías
+                de posicionamiento web y seguridad informatica.
             </p>
         </div>
     </div>
@@ -46,13 +50,15 @@ import servicesData from "./Data/services.json"
                                     href={link}
                                 >
                                     <div class="w-[41px] h-[41px] relative">
-                                        <img
-                                            class="w-[41px] h-[41px] left-0 top-0 absolute"
-                                            src={arrow}
+                                        <Arrow
+                                            color={arrow.color}
+                                            backgroundColor={
+                                                arrow.backgroundColor
+                                            }
                                         />
                                     </div>
                                     <div class="text-xl font-normal leading-7">
-                                        Learn more
+                                        Leer más
                                     </div>
                                 </a>
                             </div>
@@ -73,13 +79,11 @@ import servicesData from "./Data/services.json"
                 <div
                     class="flex-col justify-start items-start gap-[26px] inline-flex text-black"
                 >
-                    <div class="text-3xl font-medium">
-                        Let’s make things happen
-                    </div>
+                    <div class="text-3xl font-medium">Hagamoslo realidad</div>
                     <div class="text-lg font-normal">
-                        Contact us today to learn more about how our digital
-                        marketing services can help your business grow and
-                        succeed online.
+                        Contáctenos hoy para obtener más información sobre cómo
+                        nuestros servicios de marketing digital pueden ayudar a
+                        que su negocio crezca y tener éxito en línea.
                     </div>
                     <a
                         href="/"
@@ -88,13 +92,17 @@ import servicesData from "./Data/services.json"
                         <div
                             class="text-center text-white text-xl font-normal leading-7"
                         >
-                            Get your free proposal
+                            Obtén una propuesta gratis
                         </div>
                     </a>
                 </div>
             </div>
             <div class="hidden md:grid justify-items-center -m-20">
-                <img src="/services/Illustration.svg" width="50%" alt="cat" />
+                <img
+                    src="/services/proposal.svg"
+                    width="50%"
+                    alt="Obtén tu propuesta gratis con Elune"
+                />
             </div>
         </div>
     </div>

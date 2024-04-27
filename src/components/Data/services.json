@@ -1,56 +1,74 @@
 [
     {
         "id": 1,
-        "name1": "Search engine",
-        "name2": "optimization",
+        "name1": "Optimización de",
+        "name2": "motores de búsqueda",
         "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
+        "arrow": {
+            "backgroundColor": "#000",
+            "color": "#fff"
+        },
         "link": "./",
-        "image": "./services/01.svg"
+        "image": "./services/search_engine.svg"
     },
     {
         "id": 2,
-        "name1": "Pay-per-click",
-        "name2": "advertising",
-        "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
+        "name1": "Páginas",
+        "name2": "web",
+        "background": "h-[310px] p-12 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "arrow": {
+            "backgroundColor": "#000",
+            "color": "#fff"
+        },
         "link": "./",
-        "image": "./services/02.svg"
+        "image": "./services/web_page.svg"
     },
     {
         "id": 3,
-        "name1": "Social Media",
-        "name2": "Marketing",
+        "name1": "Marketing",
+        "name2": "en redes sociales",
         "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
-        "arrow": "./services/aw.svg",
+        "arrow": {
+            "backgroundColor": "#fff",
+            "color": "#000"
+        },
         "link": "./",
-        "image": "./services/03.svg"
+        "image": "./services/social_media.svg"
     },
     {
         "id": 4,
         "name1": "Email",
         "name2": "Marketing",
         "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
+        "arrow": {
+            "backgroundColor": "#000",
+            "color": "#B9B4FD"
+        },
         "link": "./",
-        "image": "./services/04.svg"
+        "image": "./services/email_marketing.svg"
     },
     {
         "id": 5,
-        "name1": "Content",
-        "name2": "Creation",
-        "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
+        "name1": "Seguridad",
+        "name2": "informática",
+        "background": "h-[310px] p-12 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "arrow": {
+            "backgroundColor": "#000",
+            "color": "#B9B4FD"
+        },
         "link": "./",
-        "image": "./services/05.svg"
+        "image": "./services/security.svg"
     },
     {
         "id": 6,
-        "name1": "Analytics and",
-        "name2": "Tracking",
+        "name1": "Analiticas y",
+        "name2": "seguimiento",
         "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
-        "arrow": "./services/aw.svg",
+        "arrow": {
+            "backgroundColor": "#fff",
+            "color": "#000"
+        },
         "link": "./",
-        "image": "./services/06.svg"
+        "image": "./services/analytics.svg"
     }
 ]
