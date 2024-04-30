@@ -4,16 +4,19 @@ import Container from "./Container.astro"
 
 <Container>
     <div class="relative flex flex-col items-center md:flex-row">
-        <div class="row items-center py-5 md:pr-16 md:w-4/12 md:py-10">
-            <div class="text-center md:text-left space-y-3 bg-lime">
-                <h2 class="text-4xl font-medium leading-none sm:text-6xl">
-                    Contact Us
+        <div class="row items-center py-5 md:pr-16 md:w-auto md:py-10">
+            <div class="text-center md:text-left space-y-3 bg-primary">
+                <h2
+                    class="text-4xl font-medium leading-none sm:text-6xl md:text-5xl"
+                >
+                    Contactanos
                 </h2>
             </div>
         </div>
         <div class="flex items-center py-5 md:w-8/12 md:py-10">
             <p class="text-xl font-normal leading-7 text-center md:text-left">
-                Connect with Us: Let's Discuss Your Digital Marketing Needs
+                Conéctese con nosotros: analicemos sus necesidades de software y
+                veamos cómo podemos ayudarlo.
             </p>
         </div>
     </div>
@@ -22,62 +25,36 @@ import Container from "./Container.astro"
         class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]"
     >
         <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
-            <form action="#" class="space-y-8 md:w-full">
-                <div class="flex">
-                    <div class="flex items-center me-4">
-                        <input
-                            id="inline-radio"
-                            type="radio"
-                            value=""
-                            name="inline-radio-group"
-                            class="w-4 h-4 text-lime bg-black border-black focus:ring-lime"
-                        />
-                        <label
-                            for="inline-radio"
-                            class="ms-2 text-base font-medium text-black"
-                            >Say Hi</label
-                        >
-                    </div>
-                    <div class="flex items-center me-4 mx-8 md:mx-20">
-                        <input
-                            id="inline-2-radio"
-                            type="radio"
-                            value=""
-                            name="inline-radio-group"
-                            class="w-4 h-4 text-lime bg-black border-black focus:ring-lime"
-                        />
-                        <label
-                            for="inline-2-radio"
-                            class="ms-2 text-base font-medium text-black"
-                            >Get a Quote</label
-                        >
-                    </div>
-                </div>
+            <form
+                action="https://formsubmit.co/1894fcb6d4484c03c22681b85a153378"
+                method="POST"
+                class="space-y-8 md:w-full"
+            >
                 <div>
                     <label
-                        for="email"
+                        for="name"
                         class="block mb-2 text-base font-medium text-black"
-                        >Name</label
+                        >Nombre</label
                     >
                     <input
-                        type="email"
-                        id="email"
+                        type="text"
+                        id="name"
                         class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5"
-                        placeholder="Name"
+                        placeholder="Nombre"
                         required
                     />
                 </div>
                 <div>
                     <label
-                        for="subject"
+                        for="email"
                         class="block mb-2 text-base font-medium text-black"
-                        >Email</label
+                        >Correo electrónico</label
                     >
                     <input
-                        type="text"
-                        id="subject"
+                        type="email"
+                        id="email"
                         class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black"
-                        placeholder="Email"
+                        placeholder="Correo electrónico"
                         required
                     />
                 </div>
@@ -85,28 +62,78 @@ import Container from "./Container.astro"
                     <label
                         for="message"
                         class="block mb-2 text-base font-medium text-black dark:text-gray-400"
-                        >Message</label
+                        >Mensaje</label
                     >
                     <textarea
                         id="message"
                         rows="6"
                         class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black"
-                        placeholder="Message"></textarea>
+                        placeholder="Mensaje (puedes dejarlo en blanco)"
+                    ></textarea>
                 </div>
                 <button
+                    id="submit"
                     type="submit"
                     class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex"
                 >
                     <div
                         class="text-center text-white text-xl font-normal leading-7"
                     >
-                        Send Message
+                        Envíar mensaje
                     </div>
                 </button>
             </form>
         </div>
-        <div class="hidden md:grid md:justify-items-end md:w-4/12 md:py-2">
-            <img src="./clients/contact.svg" alt="c" width="80%" />
+        <div class="hidden md:grid md:justify-items-end md:w-1/2">
+            <img
+                src="./clients/contact.svg"
+                alt="Dibujo de una mujer sentada pensando en una idea, con 2 cuadros y un circulo"
+                width="100%"
+            />
         </div>
     </div>
 </Container>
+
+<script>
+    import { $ } from "../lib/dom"
+
+    const $btnSubmit = $("#submit")
+    if ($btnSubmit) {
+        $btnSubmit.addEventListener("click", async function (e) {
+            e.preventDefault()
+            const $name = $("#name") as HTMLInputElement
+            const $email = $("#email") as HTMLInputElement
+            const $message = $("#message") as HTMLInputElement
+            if (!$name.value || !$email.value) {
+                alert("Por favor, rellene todos los campos")
+                return
+            }
+            fetch("/api/email/send", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: $name.value,
+                    email: $email.value,
+                    message: $message.value,
+                }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.success) {
+                        alert("Mensaje enviado correctamente")
+                        $name.value = ""
+                        $email.value = ""
+                        $message.value = ""
+                    } else {
+                        alert("Error al enviar el mensaje")
+                    }
+                })
+                .catch((err) => {
+                    console.error(err)
+                    alert("Error al enviar el mensaje")
+                })
+        })
+    }
+</script>
