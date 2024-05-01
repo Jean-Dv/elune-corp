@@ -3,7 +3,7 @@
         "id": 1,
         "name1": "Optimización de",
         "name2": "motores de búsqueda",
-        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "background": "h-[310px] p-4 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
         "arrow": {
             "backgroundColor": "#000",
             "color": "#fff"
@@ -15,7 +15,7 @@
         "id": 2,
         "name1": "Páginas",
         "name2": "web",
-        "background": "h-[310px] p-12 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "background": "h-[310px] p-4 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
         "arrow": {
             "backgroundColor": "#000",
             "color": "#fff"
@@ -27,7 +27,7 @@
         "id": 3,
         "name1": "Marketing",
         "name2": "en redes sociales",
-        "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
+        "background": "h-[310px] p-4 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
         "arrow": {
             "backgroundColor": "#fff",
             "color": "#000"
@@ -39,7 +39,7 @@
         "id": 4,
         "name1": "Email",
         "name2": "Marketing",
-        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "background": "h-[310px] p-4 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
         "arrow": {
             "backgroundColor": "#000",
             "color": "#B9B4FD"
@@ -51,7 +51,7 @@
         "id": 5,
         "name1": "Seguridad",
         "name2": "informática",
-        "background": "h-[310px] p-12 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
+        "background": "h-[310px] p-4 bg-primary rounded-[45px] shadow border border-black justify-between items-center flex text-black",
         "arrow": {
             "backgroundColor": "#000",
             "color": "#B9B4FD"
@@ -63,7 +63,7 @@
         "id": 6,
         "name1": "Analiticas y",
         "name2": "seguimiento",
-        "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
+        "background": "h-[310px] p-4 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
         "arrow": {
             "backgroundColor": "#fff",
             "color": "#000"
