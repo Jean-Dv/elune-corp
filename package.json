@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.5.4",
     "astro": "^4.1.2",
     "googleapis": "135.0.0",
     "nodemailer": "^6.9.13",
