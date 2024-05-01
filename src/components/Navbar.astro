@@ -4,7 +4,7 @@ const navLinks = [
   { href: "/about", label: "Sobre nosotros" },
   { href: "/#services", label: "Servicios" },
   { href: "/pricing", label: "Precios" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Blog", disabled: true },
 ]
 
 import Container from "./Container.astro"
@@ -47,8 +47,13 @@ import Container from "./Container.astro"
             navLinks.map((link) => (
               <li>
                 <a
-                  href={link.href}
-                  class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  href={link.disabled ? "javascript:void(0)" : link.href}
+                  class:list={[
+                    "block py-2 px-3 rounded md:bg-transparent md:p-0",
+                    link.disabled
+                      ? "text-gray-400 cursor-not-allowed"
+                      : "hover:bg-gray-100 text-black",
+                  ]}
                 >
                   {link.label}
                 </a>
